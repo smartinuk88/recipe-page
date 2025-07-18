@@ -19,6 +19,9 @@
   --text-xl: 1.75rem;
   --text-mid: 1.25rem;
   --text-base: 1rem;
+  --font-bold: 700;
+  --font-semibold: 600;
+  --font-regular: 400;
 }
 
 *,
@@ -27,4 +30,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-size: var(--text-base);
+  line-height: 1.5;
+  letter-spacing: 0;
 }
