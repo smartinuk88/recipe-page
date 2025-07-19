@@ -16,6 +16,7 @@
   --spacing-150: 0.75rem;
   --spacing-100: 0.5rem;
   --text-xxl: 2.5rem;
+  --text-xxl-mobile: 2.25rem;
   --text-xl: 1.75rem;
   --text-mid: 1.25rem;
   --text-base: 1rem;
@@ -33,7 +34,93 @@
 }
 
 body {
+  font-family: "Outfit", sans-serif;
   font-size: var(--text-base);
+  color: var(--stone-600);
+  background: var(--stone-100);
   line-height: 1.5;
   letter-spacing: 0;
+}
+
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  padding-left: var(--spacing-200);
+}
+
+li::marker {
+  color: var(--brown-800);
+  font-weight: var(--font-bold);
+}
+
+.recipe {
+  max-width: 46rem;
+  background: var(--white);
+  border-radius: 24px;
+}
+
+.recipe__title,
+.recipe__section-title,
+.recipe__meta-title {
+  line-height: 1;
+}
+
+.recipe__title,
+.recipe__section-title {
+  font-family: "Young Serif", serif;
+  font-weight: var(--font-regular);
+  margin-bottom: var(--spacing-300);
+}
+
+.recipe__section-title {
+  font-size: var(--text-xl);
+  color: var(--brown-800);
+}
+
+.recipe__section-item,
+.recipe__meta-item {
+  padding-left: var(--spacing-300);
+}
+
+.recipe-hero > img {
+  width: 100%;
+}
+
+.recipe-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: var(--spacing-400);
+  padding: var(--spacing-500) var(--spacing-400);
+}
+
+.recipe__title {
+  font-size: var(--text-xxl-mobile);
+  font-weight: var(--font-regular);
+  color: var(--stone-900);
+  margin-bottom: var(--spacing-300);
+}
+
+.recipe__meta {
+  padding: var(--spacing-300);
+  background: var(--rose-50);
+}
+
+.recipe__meta-title {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--text-mid);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--spacing-200);
+  color: var(--rose-800);
+}
+
+.recipe__meta-list {
+  color: var(--stone-600);
+}
+
+.recipe__meta-item > span {
+  font-weight: var(--font-semibold);
 }
