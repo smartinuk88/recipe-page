@@ -47,7 +47,11 @@ ol {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-100);
-  padding-left: var(--spacing-200);
+  margin-left: calc(var(--spacing-200) + 8px);
+}
+
+li > span {
+  font-weight: var(--font-semibold);
 }
 
 li::marker {
@@ -61,6 +65,13 @@ li::marker {
   border-radius: 24px;
 }
 
+.recipe__section,
+.recipe__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
 .recipe__title,
 .recipe__section-title,
 .recipe__meta-title {
@@ -71,7 +82,6 @@ li::marker {
 .recipe__section-title {
   font-family: "Young Serif", serif;
   font-weight: var(--font-regular);
-  margin-bottom: var(--spacing-300);
 }
 
 .recipe__section-title {
@@ -81,7 +91,7 @@ li::marker {
 
 .recipe__section-item,
 .recipe__meta-item {
-  padding-left: var(--spacing-300);
+  padding-left: calc(var(--spacing-300) - 8px);
 }
 
 .recipe-hero > img {
@@ -101,7 +111,6 @@ li::marker {
   font-size: var(--text-xxl-mobile);
   font-weight: var(--font-regular);
   color: var(--stone-900);
-  margin-bottom: var(--spacing-300);
 }
 
 .recipe__meta {
@@ -121,6 +130,29 @@ li::marker {
   color: var(--stone-600);
 }
 
-.recipe__meta-item > span {
-  font-weight: var(--font-semibold);
+.recipe__nutrition-list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: var(--spacing-400) 1fr var(--spacing-150) 1fr var(
+      --spacing-400
+    );
+}
+
+.recipe__nutrition-row {
+  display: contents;
+}
+
+.recipe__nutrition-key {
+  grid-column-start: 2;
+}
+
+.recipe__nutrition-value {
+  grid-column-start: 4;
+  font-weight: var(--font-bold);
+}
+
+.recipe__nutrition-row-divider {
+  border-top: 1px solid var(--stone-150);
+  grid-column: span 5;
+  margin: var(--spacing-150) 0;
 }
