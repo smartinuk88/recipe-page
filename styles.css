@@ -95,6 +95,10 @@ li::marker {
   padding-left: calc(var(--spacing-300) - 8px);
 }
 
+.recipe__section-divider {
+  color: var(--stone-150);
+}
+
 .recipe-hero > img {
   width: 100%;
   height: auto;
