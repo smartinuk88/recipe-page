@@ -100,7 +100,7 @@ li::marker {
 }
 
 .recipe__section-divider {
-  color: var(--stone-150);
+  border-top: 1px solid var(--stone-150);
 }
 
 .recipe-hero > img {
